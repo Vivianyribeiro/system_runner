@@ -59,12 +59,30 @@ Os itens abaixo não farão parte da primeira iteração:
 - pipeline de CI/CD
 - assinatura de artefatos com Cosign
 
-## Estrutura inicial do repositório
+## Estrutura inicial(2) do repositório
 
 ```text
 sistema-runner/
+│
 ├─ docs/
-├─ cli/
-├─ assinador/
+│  ├─ requirements.md
+│  ├─ architecture.md
+│  └─ cli.md
+│
+├─ cmd/
+│  └─ runner/
+│      └─ main.go
+│
+├─ internal/
+|  ├─ cli/
+│    ├─ simulador/
+│    └─ assinador/
+│  
+├─ java/
+│  └─ assinador/
+│
 ├─ tests/
-└─ README.md
+│
+├─ README.md
+├─ go.mod
+└─ .gitignore
